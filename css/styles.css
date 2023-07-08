@@ -1,0 +1,221 @@
+:root {
+    --white: #FFF;
+    --black: #111;
+    --gray: #343A40;
+
+    --mainFont: 'Raleway', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--mainFont);
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    margin: 1rem 0 4rem 0;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 5.8rem;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 120rem;
+
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+
+    border: 0.1rem solid var(--gray);
+    color: var(--gray);
+    background-color: var(--white);
+
+    transition: background-color 300ms;
+}
+
+.btn:hover {
+    color: var(--white);
+    background-color: var(--gray);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+
+/* Header */
+
+    header {
+        min-height: 60rem;
+
+        padding: 5rem 0;
+
+        background-image: url("../img/hero.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    header .container {
+        height: calc(60rem - 4rem);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        color: var(--white);
+    }
+
+    header .bar h3 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    header .bar h3 span {
+        font-weight: 300;
+    }
+
+    header .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .contact > a {
+        display: flex;
+        align-items: center;
+    }
+
+    header .contact > a::before {
+        content: "";
+
+        width: 3rem;
+        height: 3rem;
+
+        display: block;
+
+        margin-right: 1rem;
+
+        background-image: url("../img/telefono.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    header a {
+        font-size: 2rem;
+        color: var(--white);
+    }
+
+    header nav {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 1rem;
+    }
+
+    header nav a {
+        width: 100%;
+
+        padding: 0.5rem 1rem;
+
+        text-align: center;
+        transition: background-color 300ms;
+    }
+
+    header nav a:active {
+        color: var(--black);
+        background-color: rgba(255 255 255 / 0.5);
+    }
+
+    header .slogan {
+        text-align: center;
+    }
+
+    header .slogan h1 {
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    header .slogan p {
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+
+    @media screen and (width >= 768px) {
+        header .bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .bar h3 {
+            font-size: 5rem;
+        }
+
+        header .contact {
+            align-items: flex-end;
+        }
+
+        header nav {
+            flex-direction: row;
+        }
+
+        header nav a {
+            width: auto;
+        }
+
+        header nav a:hover {
+            color: var(--black);
+            background-color: rgba(255 255 255 / 0.5);
+        }
+
+        header .slogan {
+            text-align: right;
+        }
+
+        header .slogan h1 {
+            font-size: 5rem;
+        }
+    }
